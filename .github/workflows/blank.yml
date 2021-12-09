@@ -39,7 +39,7 @@ jobs:
         run: docker build -t hello-world-nginx:v1 .
 
       - name: Running container
-        run: docker run -p 80:80 hello-world-nginx:v1
+        run: docker run -p 80:80 -d hello-world-nginx:v1
 
       - name: Testing container
         run: curl localhost:80
